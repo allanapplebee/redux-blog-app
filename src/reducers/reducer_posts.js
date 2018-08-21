@@ -13,6 +13,8 @@ export default function(state={}, action) {
       // return newState;
 
       //identical in function to commented code above
+      //[] are not an array, its key iterpolation. makes new key on the object using value of action.pay...id
+      //and sets its value to action.payload.data
       return { ...state, [action.payload.data.id]: action.payload.data };
     default:
       return state;
